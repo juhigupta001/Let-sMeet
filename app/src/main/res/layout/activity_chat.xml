@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1EDED"
+    tools:context=".ChatActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profiletv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_img_white"
+            android:background="@color/design_default_color_primary_dark"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/nametv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="His Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#ffff"/>
+            <TextView
+                android:id="@+id/userstatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="online"
+
+                android:textStyle="bold"
+                android:textColor="#ffff"/>
+
+
+
+
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"/>
+ <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/chatlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#ffff"
+        android:layout_alignParentBottom="true">
+
+     <EditText
+
+         android:id="@+id/messages"
+         android:layout_weight="1"
+         android:hint="Start typing"
+         android:textColor="@color/design_default_color_primary_dark"
+         android:padding="15dp"
+         android:inputType="textCapSentences|textMultiLine"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content" />
+     <ImageButton
+         android:layout_width="40dp"
+         android:layout_height="40dp"
+         android:id="@+id/sendbtn"
+         android:src="@drawable/ic_send_img"
+         android:background="@null"/>
+
+
+ </LinearLayout>
+
+</RelativeLayout>
